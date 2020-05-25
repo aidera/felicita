@@ -1,0 +1,125 @@
+#banner-menu
+  padding-top: 30px
+  height: 70px
+  @media (max-width: 1300px) 
+    height: 90px
+  li
+    display: inline-block
+    a,p
+      display: inline-block
+      color: white
+      margin: 0 20px
+      text-transform: uppercase
+      font-size: 20px
+      transition: 0.5s
+      cursor: pointer
+      padding-bottom: 10px
+    &:hover
+      >a,p,img
+        color: $brand-primary
+      @media (min-width: 1800px) 
+        font-size: 26px
+    @media (max-width: 1300px) 
+      margin: 0 10px
+  li.drop-down
+    position: relative
+    img
+      width: 10px
+      display: inline-block
+      position: absolute
+      right: 0px
+      top: 6px
+      @media (min-width: 1800px) 
+        width: 12px
+        top: 10px
+    ul
+      position: absolute
+      background: white
+      top: 30px
+      width: 250px
+      text-align: left
+      box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+      display: none
+      z-index: 2
+      li
+        display: block
+        border-bottom: 1px solid lightgray
+        
+        a
+          padding: 10px 0px
+          color: black
+          display: block
+          &:hover
+            color: $brand-primary
+    &:hover
+      >ul
+        display: block
+      
+
+
+  @media (max-width: 1024px) 
+    display: none
+
+  
+  .banner-menu1
+    float: left
+    @media (max-width: 1300px)
+      float: none
+  .banner-menu2
+    float: right
+    @media (max-width: 1300px)
+      float: none
+      margin-top: 10px
+    a
+      display: inline-block
+      color: white
+      margin: 0 20px
+      text-transform: uppercase
+      font-size: 20px
+      transition: 0.5s
+      b
+        color: white
+        text-transform: uppercase
+        font-size: 20px
+        @media (min-width: 1800px) 
+          font-size: 26px
+      &:hover
+        color: $brand-primary
+      @media (min-width: 1800px) 
+        font-size: 26px
+      @media (max-width: 1300px) 
+        margin: 0 10px
+.bunner-lang-controller
+  margin-right: 20px
+  text-align: right
+  display: block
+  // float: right
+  @media (max-width: 1300px) 
+    float: left
+    margin-top: -60px
+    margin-right: 0
+    text-align: center
+    display: inline-block
+  @media (max-width: 1024px)
+    display: none
+
+  *
+    display: inline-block
+    color: white
+    margin: 0
+    taxt-align: right
+    font-size: 20px
+    text-transform: uppercase
+    @media (min-width: 1800px) 
+      font-size: 26px
+  p
+    margin: 0 5px
+    cursor: default
+  .active
+    font-family: Calibri
+    font-weight: bold
+    color: $brand-primary2
+  a
+    transition: 0.3s
+    &:hover
+      color: $brand-primary

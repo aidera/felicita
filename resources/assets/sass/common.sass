@@ -1,0 +1,266 @@
+*
+  font-size: 18px
+  color: #000
+  font-family: CalibriLight
+  line-height: 22px
+  @media (min-width: 1800px)
+    font-size: 24px
+    line-height: 28px
+  
+body
+  background-color: #ECECEC
+  text-align: center
+  position: relative
+  overflow-x: hidden
+  
+
+  @media (min-width: 1800px)
+    font-size: 22px
+
+.page-container
+  display: inline-block
+  width: 1300px
+  margin: 0 auto
+  text-align: center
+
+
+  @media (min-width: 1800px) 
+    width: 1700px
+    
+  @media (max-width: 1300px) 
+    width: 1000px
+    
+  @media (max-width: 1024px) 
+    width: 95%
+
+
+#overlay
+  background-color: rgba(0,0,0,0.3)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+  z-index: 10
+  display: none
+  user-select: none
+  opacity: 0
+
+
+
+@keyframes pulse
+  from 
+    transform: scale(1.05)
+  50%
+    transform: scale(1)
+  to 
+    transform: scale(1.05)
+@keyframes fade-in
+  from 
+    opacity: 0
+  to 
+    opacity: 1
+
+#preloader
+  background-color: white
+  position: fixed
+  z-index: 20
+  width: 150%
+  height: 150%
+  left: -25%
+  top: -25%
+  img
+    width: 150px
+    height: 150px
+    position: fixed
+    left: 50%
+    margin-left: -75px
+    top: 50%
+    margin-top: -75px
+    animation: pulse  3s infinite ease-in-out, fade-in 1s
+
+
+#agreement-popup
+  position: fixed
+  left: 30px
+  bottom: 30px
+  background-color: white
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+  z-index: 11
+  padding: 20px 
+  display: none
+  opacity: 0
+  @media (min-width: 1800px)
+    left: 60px
+    bottom: 60px 
+  @media (max-width: 550px)
+    left: 0
+    bottom: 0
+    width: 100%
+  p
+    text-align: left
+    display: inline-block
+    width: 350px 
+    vertical-align: middle 
+    @media (min-width: 1800px)
+      width: 400px
+    @media (max-width: 550px)
+      width: 65%
+    a
+      color: $brand-primary2
+      transition: 0.5s
+      &:hover
+        color: $brand-primary
+  div.button
+    with: 50px
+    display: inline-block
+    margin-left: 15px
+    vertical-align: middle 
+    @media (min-width: 1800px)
+      width: 80px
+      
+
+
+
+
+.background-dish-container
+  position: absolute
+  width: 100%
+  height: 100%
+  overflow: hidden
+  left: 0
+  top: 0
+.background-dish
+  position: absolute
+  background-repeat: repeat-y
+  background-size: contain
+  background-position: center
+  height: 100%
+  width: 180px
+  overflow: hidden
+  top: 0
+  z-index: -1
+  opacity: 0.7
+  @media (min-width: 1800px) 
+    width: 200px
+.background-dish-left
+  left: -30px
+  background-image: url(/img/bg-dish.png)
+  @media (min-width: 1800px) 
+    left: -40px
+.background-dish-right
+  right: -30px
+  background-image: url(/img/bg-dish-2.png)
+  @media (min-width: 1800px) 
+    right: -40px
+
+
+
+#cart_add-icon
+  position: fixed
+  left: 0
+  top: 0
+  width: 30px
+  height: 30px
+  z-index: 6
+  display: none
+  img
+    width: 100%
+    height: 100%
+.movingCartAnimation
+  transform: rotate(5deg)
+
+.button
+  color: white
+  display: inline-block
+  border-radius: 10px
+  padding: 10px 20px
+  background-color: $brand-primary2
+  transition: 0.5s
+  font-family: Calibri
+  vertical-align: middle
+  cursor: pointer
+  @media (min-width: 1800px)
+    font-size: 24px
+  p
+    font-family: Calibri
+    vertical-align: middle
+    color: white
+    display: inline-block
+    @media (min-width: 1800px)
+      font-size: 24px
+  img
+    width: 20px
+    heihgt: 20px
+    vertical-align: middle
+    display: inline-block
+  &:hover
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
+    transform: scale(1.1)
+
+.label-new
+  position: absolute
+  right: 0
+  top: 10%
+  background-color: $brand-primary
+  color: white
+  padding: 10px 20px
+  font-family: Calibri
+  border-top-left-radius: 10px
+  border-bottom-left-radius: 10px
+
+.header-separator
+  font-size: 30px
+  line-height: 30px
+  padding-bottom: 20px
+  text-align: left
+  @media (min-width: 1800px)
+    font-size: 40px
+    line-height: 40px
+    padding-bottom: 25px
+
+
+
+.switch-btn 
+  display: block
+  width: 60px
+  height: 30px
+  border-radius: 15px
+  background: lightgray
+  z-index: 0
+  margin: 0
+  margin-top: 10px
+  padding: 0
+  border: none
+  cursor: pointer
+  position: relative
+  transition-duration: 300ms
+  p.switch-btn-notes
+    position: absolute
+    color: white
+    font-size: 12px
+    line-height: 12px
+    &.true
+      left: 12px
+      top: 8px
+    &.false
+      left: 32px
+      top: 9px
+.switch-btn::after
+  content: ""
+  height: 24px
+  width: 24px
+  border-radius: 18px
+  background: #fff
+  top: 3px
+  left: 3px
+  transition-duration: 300ms
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+  position: absolute
+  z-index: 1
+.switch-on
+  background: $brand-primary
+.switch-on::after
+  left: 32px
+  background: white

@@ -1,0 +1,74 @@
+footer
+  position: relative
+  background-color: $brand-primary
+  padding: 40px 0
+  user-select: none
+  box-shadow: 0 0 5px rgba(0,0,0,0.5)
+  z-index: 1
+  overflow: hidden
+  @media (min-width: 1800px)
+    padding: 50px 0
+  a,p,b
+    color: white
+    @media (min-width: 1800px)
+      font-size: 24px
+  a
+    display: inline-block
+    vertival-align: middle
+    transition: 0.5s
+    padding: 10px
+    &:hover
+      color: $brand-primary2
+  .content  
+    display: grid
+    grid-template-columns: 1fr 2fr 1fr
+    @media (max-width: 800px)
+      display: block
+
+  .logo-container
+    text-align: center
+    a
+      border-radius: 100px
+      height: 150px
+      width: 150px
+      background-color: white
+      cursor: pointer
+      transition: 0.5s
+      display: inline-block
+      @media (min-width: 1800px)
+        height: 200px
+        width: 200px
+      &:hover
+        box-shadow: 0 0 5px rgba(0,0,0,0.5)
+        background-color: $brand-primary2
+  .menu-container
+    vertival-align: middle
+    margin-top: 50px
+    @media (min-width: 1800px)
+      margin-top: 70px
+    
+  .others-container
+    margin-top: 50px
+    @media (min-width: 1800px)
+      margin-top: 70px
+    .phone
+      margin-bottom: 5px
+      a
+        font-size: 20px
+        font-weight: bold
+        @media (min-width: 1800px)
+          font-size: 28px
+    .socials
+      a
+        width: 40px
+        height: 40px
+        display: inline-block
+        padding: 10px
+        margin: 0 5px
+        border-radius: 40px
+        @media (min-width: 1800px)
+          width: 60px
+          height: 60px
+          padding: 15px
+        &:hover
+          background-color: $brand-primary2

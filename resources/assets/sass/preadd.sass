@@ -1,0 +1,259 @@
+#cart_preadd  
+  position: fixed
+  width: 600px
+  left: 50%
+  margin-left: -300px
+  top: 50%
+  margin-top: -250px
+  z-index: 11
+  background-color: white
+  box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+  display: none
+  opacity: 0
+  @media (min-width: 1800px) 
+    width: 800px
+    margin-left: -400px
+  @media (max-width: 600px)
+    width: 100%
+    height: 100%
+    left: 0
+    margin-left: 0
+    top: 0
+    margin-top: 0
+
+  
+  .container
+    position: relative
+    padding: 20px
+    @media (max-width: 600px)
+      top: 50%
+      transform: translateY(-50%)
+      
+    
+    h3
+      font-size: 30px
+      padding: 10px 20px
+      @media (min-width: 1800px) 
+        font-size: 34px
+    ul
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      align-items: start
+      justify-items: center
+      grid-row-gap: 10px
+      margin-top: 20px
+      overflow-x: visible
+      overflow-y: scroll
+      height: 250px
+      border: 1px solid lightgray
+      @media (min-width: 1800px) 
+        height: 300px
+      @media (max-width: 600px)
+        grid-template-columns: 1fr 1fr 1fr
+      @media (max-width: 450px)
+        grid-template-columns: 1fr 1fr
+      @media (max-width: 350px) 
+        height: 200px
+      
+      li
+        display: inline-block
+        width: 120px
+        cursor: pointer
+        border: 1px solid lightgray
+        padding: 10px
+        position: relative
+        @media (min-width: 1800px) 
+          width: 160px
+          padding: 15px
+        @media (max-width: 450px)
+          width: 150px
+        @media (max-width: 380px)
+          width: 130px
+        @media (max-width: 340px)
+          width: 120px
+        @media (max-width: 320px)
+          width: 110px
+        
+        &.active
+          border: 3px solid $brand-primary
+        img
+          display: inline-block
+          width: 80%
+        b
+          padding-top: 10px
+          display: block
+          @media (min-width: 1800px) 
+            padding-top: 15px
+        p
+          font-weight: bold
+          display: block
+
+        
+        .question
+          position: absolute
+          right: 20px
+          top: 20px
+          cursor: pointer
+          background-color: gray
+          color: white
+          border-radius: 10px
+          padding: 2px
+          width: 20px
+          height: 20px
+          display: block
+          @media (min-width: 1800px) 
+            width: 30px
+            height: 30px
+            border-radius: 15px
+        .answear
+          width: 200px
+          height: auto
+          background-color: white
+          box-shadow: 0 0 5px rgba(0,0,0,0.5)
+          position: fixed
+          z-index: 2
+          padding: 10px
+          display: none
+    
+    .pungent
+      margin-top: 30px
+      text-align: center
+      @media (min-width: 1800px)
+        margin-top: 40px
+      input
+        width: 20px
+        height: 20px
+        margin-right: 20px
+        display: inline-block
+        vertical-align: middle
+        cursor: pointer
+        @media (min-width: 1800px)
+          width: 25px
+          height: 25px
+      label
+        cursor: pointer
+        display: inline-block
+        vertical-align: middle
+        user-select: none
+        img
+          width: 30px
+          margin-left: 10px
+          display: inline-block
+          vertical-align: middle
+        p
+          display: inline-block
+          vertical-align: middle
+          user-select: none
+          font-size: 20px
+          @media (min-width: 1800px)
+            font-size: 24px
+
+
+    .preadd-count
+      text-align: right
+      @media (max-width: 600px)
+        text-align: center
+      
+      
+      .endprice
+        display: inline-block
+        padding: 10px
+        margin-top: 30px
+        text-align: left
+        @media (max-width: 600px)
+          display: block
+          margin-top: 20px
+          text-align: center
+        @media (max-width: 350px)
+          margin-top: 10px
+        b
+          font-size: 20px
+          display: inline-block
+          margin-right: 10px
+          @media (min-width: 1800px) 
+            font-size: 28px
+        p
+          font-family: Calibri
+          font-size: 20px
+          margin-right: 10px
+          display: inline-block
+          @media (min-width: 1800px) 
+            font-size: 28px
+          b
+            font-family: Calibri
+            font-size: 20px
+            margin-right: 0
+            @media (min-width: 1800px) 
+              font-size: 28px
+        .crossed
+          text-decoration: line-through
+          b
+            text-decoration: line-through
+
+      .regulators
+        user-select: none
+        text-align: center
+        display: inline-block
+        margin-top: 30px
+        @media (max-width: 1300px) 
+          margin-top: 10px
+          text-align: left
+        @media (max-width: 1024px) 
+          margin-top: 0
+          text-align: center
+        @media (max-width: 600px) 
+          margin-top: 20px
+          text-align: center
+        @media (max-width: 350px) 
+          margin-top: 0px
+        .plus-minus
+          border-radius: 30px
+          display: inline-block
+          background-color: $brand-primary2
+          vertical-align: middle
+          .button_minus, .button_plus, .count
+            padding: 10px
+            width: 35px
+            height: 35px
+            display: inline-block
+            color: white
+            text-align: center
+            background-color: $brand-primary2
+            margin: 0
+            border-radius: 30px
+            transition: 0.5s
+            @media (min-width: 1800px)
+              width: 45px
+              height: 45px
+          .count
+            width: auto
+            padding: 10px 0
+            
+          .button_minus, .button_plus
+            cursor: pointer
+            font-family: Calibri
+            &:hover
+              transform: scale(1.1)
+              box-shadow: 0 0 5px rgba(0,0,0,0.5)
+      
+      .add-button-container
+        display: inline-block
+        margin-left: 20px
+        margin-right: 20px
+        margin-top: 10px
+        @media (max-width: 600px) 
+          margin: 0
+        @media (max-width: 350px) 
+          margin-top: 10px
+          margin-left: 10px
+
+
+  .preadd-close
+    position: absolute
+    right: 10px
+    top: 30px
+    user-select: none
+    cursor: pointer
+    img
+      width: 35px
+      height: 35px      

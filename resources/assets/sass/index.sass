@@ -1,0 +1,277 @@
+section#general-image_index
+  height: 100vh
+  position: relative
+  overflow: hidden
+  z-index: 1
+  .img, .pre-img
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: right center
+    z-index: -2
+  .img
+    background-image: url(/img/index/index.jpg)
+  .pre-img
+    background-image: url(/img/index/index-small.jpg)
+  .banner-overlay
+    background: rgb(0,0,0)
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%)
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    z-index: -1
+  .page-container
+    position: relative
+    height: 100%
+  .lang-controller
+    margin-right: 20px
+    text-align: right
+    display: block
+    // float: right
+    @media (max-width: 1300px) 
+      // float: none
+      text-align: center
+    @media (max-width: 1024px)
+      display: none
+
+    *
+      display: inline-block
+      color: white
+      margin: 0
+      taxt-align: right
+      font-size: 20px
+      text-transform: uppercase
+      @media (min-width: 1800px) 
+        font-size: 26px
+    p
+      margin: 0 5px
+      cursor: default
+    .active
+      font-family: Calibri
+      font-weight: bold
+      color: $brand-primary2
+    a
+      transition: 0.3s
+      &:hover
+        color: $brand-primary
+  
+
+  .banner-text
+    position: absolute
+    text-align: right
+    display: inline-block
+    top: 40%
+    right: 0
+    z-index: 1
+    @media (max-width: 600px)
+      top: 30%
+    h1
+      font-family: NewChannel
+      color: white
+      display: inline-block
+      padding: 10px 20px
+      border-radius: 10px
+      font-size: 90px
+      line-height: 90px
+      text-transform: uppercase
+      background-color: $brand-primary2
+      user-select: none
+      @media (min-width: 1800px) 
+        font-size: 120px
+        line-height: 120px
+        padding: 15px 25px
+        border-radius: 15px
+      @media (max-width: 800px) 
+        font-size: 70px
+        line-height: 70px
+      @media (max-width: 400px)
+        font-size: 60px
+        line-height: 60px
+    p
+      font-family: NewChannel
+      color: white
+      font-size: 90px
+      line-height: 90px
+      user-select: none
+      display: block
+      position: absolute
+      right: 40px
+      top: -15px
+      @media (min-width: 1800px) 
+        font-size: 120px
+        right: 50px
+        line-height: 120px
+      @media (max-width: 800px) 
+        font-size: 70px
+        line-height: 70px
+        top: -10px
+      @media (max-width: 400px)
+        font-size: 60px
+        line-height: 60px
+        
+    h2
+      color: white
+      font-size: 28px
+      line-height: 28px
+      padding-top: 15px
+      text-transform: uppercase
+      width: 100%
+      @media (min-width: 1800px) 
+        font-size: 34px
+        line-height: 34px
+        padding-top: 20px
+      @media (max-width: 800px) 
+        font-size: 24px
+        line-height: 24px
+    .bunner-button
+      color: white
+      display: inline-block
+      border-radius: 10px
+      padding: 15px 30px
+      border: 2px solid white
+      transition: 0.5s
+      font-family: CalibriLight
+      text-transform: uppercase
+      font-size: 34px
+      line-height: 34px
+      margin-top: 20px
+      letter-spacing: 0px
+      &:hover
+        box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+        padding: 15px 60px
+        margin-right: 40px
+        background-color: $brand-primary
+      @media (min-width: 1800px) 
+        font-size: 40px
+        line-height: 40px
+        padding: 20px 40px
+        margin-top: 25px
+        &:hover
+          padding: 20px 60px
+          margin-right: 60px
+      @media (max-width: 800px) 
+        font-size: 30px
+        line-height: 30px
+
+
+
+            
+#promos
+  padding-top: 150px
+  .promos-container
+    display: grid
+    grid-template-columns: 2fr 1fr
+    grid-column-gap: 10px
+    grid-row-gap: 20px
+    @media (max-width: 1000px)
+      grid-template-columns: 1fr 1fr
+    @media (max-width: 850px)
+      grid-template-columns: 1fr 
+  .promo
+    width: 100%
+    position: relative
+    overflow: hidden
+    height: 400px
+    box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+    border-radius: 15px
+    @media (max-width: 1000px)
+      height: 500px
+    .img
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-repeat: no-repeat
+      background-size: cover
+      
+      
+  .promo-1
+    @media (max-width: 850px)
+      height: 400px 
+    @media (max-width: 500px)
+      height: 350px
+    .img
+      background-position: left center
+      background-image: url(/upload/promos/promo-tickets.jpg)
+      @media (max-width: 1000px)
+        background-position: left center 
+        background-image: url(/upload/promos/promo-tickets-square.jpg)
+      @media (max-width: 850px)
+        background-position: left center 
+        background-image: url(/upload/promos/promo-tickets.jpg)
+      @media (max-width: 500px) 
+        background-position: left center
+        background-image: url(/upload/promos/promo-tickets-square.jpg)
+
+  .promo-2
+    @media (max-width: 850px)
+      height: 500px
+    @media (max-width: 650px)
+      height: 350px
+    .img
+      background-position: center top
+      background-image: url(/upload/promos/promo-delivery.jpg)
+      @media (max-width: 500px) 
+        background-image: url(/upload/promos/promo-delivery_square.jpg)
+
+  .promo-3
+    grid-column-start: 1
+    grid-column-end: 3
+    height: 300px
+    @media (min-width: 1800px)
+      height: 400px
+    @media (max-width: 850px)
+      height: 500px
+      grid-column-start: 1
+      grid-column-end: 1
+    @media (max-width: 600px)
+      height: 350px
+    .img
+      background-position: center center
+      background-image: url(/upload/promos/promo_lasagne-500.jpg)
+      @media (max-width: 850px) 
+        background-image: url(/upload/promos/promo_lasagne-500_square.jpg)
+
+
+
+
+#items
+  .ravioli-additional
+    padding-bottom: 30px
+    ul
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+      background-color: white
+      padding: 10px
+      align-atems: center
+      align-self: center
+      border-radius: 15px
+      @media (max-width: 1000px) 
+        grid-template-columns: 1fr
+      li
+        align-items: center
+        display: inline-block
+        border-right: 1px solid lightgray
+        padding: 10px
+        display: grid
+        grid-template-columns: 40px 1fr
+        grid-gap: 10px
+        @media (max-width: 1000px) 
+          border-right: none
+        
+        &:last-child
+          border-right: none
+        
+        img
+          width: 40px
+          display: inline-block
+        p
+          display: inline-block

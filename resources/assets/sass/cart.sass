@@ -1,0 +1,370 @@
+#cart
+  padding-top: 150px
+  margin-bottom: 150px
+  position: relative
+  z-index: 1
+  overflow: hidden
+  @media (max-width: 1024px)
+    padding-top: 100px
+    margin-bottom: 100px
+  .container
+    display: grid
+    grid-template-columns: 3fr 2fr
+    grid-template-areas: "order-info item-info"
+    grid-column-gap: 20px
+    // grid-template-rows: none
+    @media (max-width: 1024px) 
+      display: block
+
+#order-info
+  background-color: white
+  padding: 20px
+  box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+  grid-area: order-info
+  height: auto
+  border-radius: 15px
+  @media (min-width: 1800px) 
+    padding: 40px
+  .block
+    margin-bottom: 40px
+    text-align: left
+    @media (min-width: 1800px) 
+      margin-bottom: 60px
+    .fancy-input
+      display: inline-block
+      position: relative
+      margin-right: 10px
+      margin-bottom: 20px
+      @media (min-width: 1800px) 
+        margin-right: 20px
+        margin-bottom: 30px
+      label
+        position: absolute
+        left: 5px
+        bottom: 7px
+        z-index: 1
+        transition: 0.5s
+        @media (min-width: 1800px) 
+          left: 10px
+          bottom: 12px
+        &.focus
+          font-size: 12px
+          bottom: 30px
+          @media (min-width: 1800px) 
+            font-size: 16px
+            bottom: 42px
+      input, select
+        border-bottom: 2px solid $brand-primary
+        padding: 5px
+        width: 200px
+        position: relative
+        z-index: 2
+        @media (min-width: 1800px) 
+          width: 300px
+          padding: 10px
+        &.short
+          width: 100px
+          @media (min-width: 1800px) 
+            width: 150px
+        &.large
+          width: 400px
+          @media (min-width: 1800px) 
+            width: 600px
+          @media (max-width: 800px)
+            width: 100%
+
+    .radio-input
+      margin-bottom: 10px
+      label
+        cursor: pointer
+    
+    b
+      font-weight: bold
+
+    #cart-form_submit
+      width: auto
+      border: none
+      padding: 10px 40px
+      float: right
+      @media (min-width: 1800px) 
+        padding: 15px 60px
+
+  .block-address-self
+    display: none
+    
+
+
+
+
+#item-info
+  background-color: white
+  padding: 20px
+  grid-area: item-info
+  align-self: start
+  border-radius: 15px
+  box-shadow: 0 11px 15px rgba(0,0,0,0.2)
+  @media (max-width: 1024px) 
+    margin-bottom: 20px
+  ul
+
+    li
+      display: block
+      a
+        display: grid
+        grid-template-columns: 120px 1fr 130px
+        grid-template-areas: "img text buttons"
+        border-bottom: 1px solid lightgray
+        margin-bottom: 20px
+        padding-bottom: 20px
+        text-align: left
+        @media (min-width: 1800px)
+          grid-template-columns: 170px 1fr 130px
+        @media (max-width: 1300px) 
+          grid-template-columns: 120px 1fr
+          grid-template-areas: "img text" "buttons buttons"
+        @media (max-width: 1024px) 
+          grid-template-columns: 120px 1fr 130px
+          grid-template-areas: "img text buttons"
+        @media (max-width: 600px) 
+          grid-template-columns: 120px 1fr
+          grid-template-areas: "img text" "buttons buttons"
+      .img-container
+        width: 100px
+        height: 100px
+        position: relative
+        overflow: hidden
+        display: inline-block
+        vertical-align: top
+        grid-area: img
+        border-radius: 15px
+        @media (min-width: 1800px)
+          height: 150px
+          width: 150px
+        img
+          position: absolute
+          min-width: 100%
+          min-height: 100%
+          height: 100%
+          width: auto
+          top: 0
+          left: 0
+          transition: 0.5s
+      .text-container
+        display: inline-block
+        vertical-align: top
+        grid-area: text
+        h3
+          font-size: 24px
+          line-height: 24px
+          margin-bottom: 10px
+          @media (min-width: 1800px)
+            font-size: 28px
+            line-height: 28px
+            margin-bottom: 15px
+        .weight
+          font-style: italic
+          margin-bottom: 10px
+        .price, .old-price
+          font-family: Calibri
+          &.big
+            font-size: 20px
+            line-height: 20px
+            @media (min-width: 1800px)
+              font-size: 26px
+              line-height: 26px
+        .crossed
+          text-decoration: line-through
+      .regulators
+        user-select: none
+        grid-area: buttons
+        text-align: center
+        @media (max-width: 1300px) 
+          margin-top: 10px
+          text-align: left
+        @media (max-width: 1024px) 
+          margin-top: 0
+          text-align: center
+        @media (max-width: 600px) 
+          margin-top: 10px
+          text-align: left
+        .plus-minus
+          border-radius: 30px
+          display: inline-block
+          background-color: $brand-primary2
+          vertical-align: middle
+          .button_minus, .button_plus, .count
+            padding: 10px
+            width: 35px
+            height: 35px
+            display: inline-block
+            color: white
+            text-align: center
+            background-color: $brand-primary2
+            margin: 0
+            border-radius: 30px
+            transition: 0.5s
+            @media (min-width: 1800px)
+              width: 45px
+              height: 45px
+          .count
+            width: auto
+            padding: 10px 0
+            
+          .button_minus, .button_plus
+            cursor: pointer
+            font-family: Calibri
+            line-height: 16px
+            &:hover
+              transform: scale(1.1)
+              box-shadow: 0 0 5px rgba(0,0,0,0.5)
+        .delete
+          margin-top: 10px
+          display: inline-block
+          vertical-align: middle
+          @media (max-width: 1300px)
+            margin-top: 0
+          @media (max-width: 1024px) 
+            margin-top: 10px
+          @media (max-width: 600px) 
+            margin-top: 0
+
+  .delivery, .promo
+    padding: 20px 10px
+    border-bottom: 1px solid lightgray
+    text-align: left
+
+    b
+      display: inline-block
+      margin-right: 10px
+    p
+      font-family: Calibri
+      margin-right: 10px
+      display: inline-block
+      b
+        font-family: Calibri
+        margin-right: 0
+
+  .additional
+    padding: 10px
+    padding-bottom: 30px
+    border-bottom: 1px solid lightgray
+    text-align: left
+    display: grid
+    grid-template-columns: 40px 1fr
+    grid-gap: 20px
+    align-self: center
+    align-items: center
+    justify-self: center
+    img
+      width: 40px
+    p,a
+      display: inline
+      a
+        color: $brand-primary
+        text-decoration: underline
+        &:hover
+          text-decoration: none
+        
+  .endprice
+    padding: 10px
+    text-align: left
+    padding-top: 30px
+    b
+      font-size: 30px
+      line-height: 30px
+      display: inline-block
+      margin-right: 10px
+    p
+      font-family: Calibri
+      font-size: 30px
+      line-height: 30px
+      margin-right: 10px
+      display: inline-block
+      b
+        font-family: Calibri
+        font-size: 30px
+        line-height: 30px
+        margin-right: 0
+    .crossed
+      text-decoration: line-through
+      b
+        text-decoration: line-through
+  .low-cost-error
+    text-align: left
+    padding: 10px
+    display: none
+    p
+      color: red
+  
+
+      
+.block-error
+  .error-message
+    color: red
+#cart-form_submit
+  width: 300px
+  margin-top: 50px
+  padding: 15px
+  font-size: 24px
+  line-height: 24px
+  margin-bottom: 10px
+  @media (max-width: 310px)
+    width: 100%
+  &.disable
+    background-color: gray !important
+
+.submit-loader
+  height: 60px
+  margin-top: 50px
+  margin-bottom: 10px
+  display: none
+  img
+    height: 100%
+
+#submit-agreement
+  color: #747474
+  font-size: 14px
+  @media (min-width: 1800px)
+    font-size: 18px
+  a
+    color: #747474
+    font-size: 14px
+    cursor: pointer
+    text-decoration: underline
+    @media (min-width: 1800px)
+      font-size: 18px
+
+
+
+#message-container
+  background-color: white
+  padding: 50px
+  display: inline-block
+  margin-top: 150px
+  margin-bottom: 50px
+  position: relative
+  z-index: 1
+  @media (min-width: 1800px)
+    margin-top: 200px
+    margin-bottom: 100px
+  @media (max-width: 1024px)
+    margin-top: 100px
+  @media (max-width: 600px)
+    width: 95%
+    padding: 59px 20px
+  img
+    max-width: 400px
+    @media (min-width: 1800px)
+      max-width: 600px
+    @media (max-width: 600px)
+      width: 100%
+  h2
+    font-size: 30px
+    line-height: 30px
+    margin-bottom: 20px
+    display: block
+    text-align: center
+    @media (min-width: 1800px)
+      font-size: 40px
+      line-height: 40px
+
